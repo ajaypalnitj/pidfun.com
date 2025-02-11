@@ -177,30 +177,32 @@ body::before {
 
 /* Hero Section Styles */
 .hero {
-    min-height: 50vh;
+    min-height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+    margin-bottom: -2rem;
 }
 
 .hero-content {
     max-width: 800px;
+    padding: 1rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid2) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .cta-button {
@@ -220,7 +222,7 @@ body::before {
 
 /* Cards Section Styles */
 .tools-section, .extensions-section {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .tools-grid, .extensions-grid {
