@@ -3,58 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Transcript Analyzer - PidFun</title>
-    <meta name="description" content="Extract and analyze transcripts from YouTube videos.">
+    <title>YouTube Transcript Analyzer - PidFun AI Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
 </head>
 <body>
+    <!-- Include Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
                 <a href="../index.html">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(#logoGradient)">PidFun</text>
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:var(--gradient-start);stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:var(--gradient-mid2);stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="../assets/img/pidfun-text.svg" alt="PidFun Logo" height="40">
                 </a>
             </div>
             <div class="nav-links">
                 <div class="dropdown">
-                   <a href="../index.html#tools">Tools <span class="arrow">&#9660;</span></a>
-                   <div class="dropdown-content">
-                       <a href="../tools.html">All Tools</a>
-                       <a href="youtube-transcript.html">YouTube Transcript</a>
-                       <a href="text-analysis.html">Text Analysis</a>
-                       <a href="pdf-summarizer.html">PDF Summarizer</a>
-                   </div>
+                    <a href="#" onclick="return false;">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="tools.html"><i class="fas fa-tools"></i> All Tools</a>
+                        <a href="youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
+                        <a href="text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
+                        <a href="pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
+                    </div>
                 </div>
-               <div class="dropdown">
-                   <a href="../index.html#extensions">Extensions <span class="arrow">&#9660;</span></a>
-                   <div class="dropdown-content">
-                       <a href="../extensions.html">All Extensions</a>
-                       <a href="../extensions/citation-helper.html">Citation Helper</a>
-                       <a href="../extensions/grammar-checker.html">Grammar Checker</a>
-                       <a href="../extensions/readability-enhancer.html">Readability Enhancer</a>
-                   </div>
-               </div>
+                <div class="dropdown">
+                    <a href="#" onclick="return false;">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="../extensions/extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
+                        <a href="../extensions/citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
+                        <a href="../extensions/grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a>
+                        <a href="../extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
+                    </div>
+                </div>
                 <a href="../pages/about.html">About</a>
             </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <section >
-            <h2>YouTube Transcript Analyzer</h2>
-            <p>Tool-specific content goes here...</p>
+        <section class="tool-section" style="padding-top: 120px;">
+            <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3rem; margin-bottom: 2rem;">YouTube Transcript Analyzer</h1>
+                
+                <div class="tool-description" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                    <p>Extract and analyze transcripts from YouTube videos with our powerful tool. Get insights, summaries, and more.</p>
+                </div>
+
+                <div class="tool-features">
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">Features</h2>
+                    <ul style="margin-left: 2rem;">
+                        <li>Extract transcripts from any YouTube video</li>
+                        <li>Generate summaries of video content</li>
+                        <li>Analyze key topics and themes</li>
+                        <li>Export transcripts in multiple formats</li>
+                    </ul>
+                </div>
+
+                <div class="tool-usage">
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">How to Use</h2>
+                    <ol style="margin-left: 2rem;">
+                        <li>Paste your YouTube video URL</li>
+                        <li>Select your preferred analysis options</li>
+                        <li>Click "Analyze" to get results</li>
+                        <li>Download or share your analysis</li>
+                    </ol>
+                </div>
+
+                <div class="tool-demo" style="margin-top: 3rem;">
+                    <div class="demo-container" style="background: var(--background-secondary); padding: 2rem; border-radius: 8px;">
+                        <input type="text" placeholder="Paste YouTube URL here..." style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; border: 1px solid var(--border);">
+                        <button class="cta-button" style="width: 100%;">Analyze Video</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Include Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -75,6 +100,5 @@
             <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
 </body>
 </html> 

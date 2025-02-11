@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - PidFun</title>
-    <meta name="description" content="PidFun's Privacy Policy - Learn how we protect and handle your data.">
+    <title>Privacy Policy - PidFun AI Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
 </head>
 <body>
     <header class="header">
@@ -18,7 +17,7 @@
             </div>
             <div class="nav-links">
                 <div class="dropdown">
-                    <a href="../tools/tools.html">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <a href="#" onclick="return false;">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
                     <div class="dropdown-content">
                         <a href="../tools/tools.html"><i class="fas fa-tools"></i> All Tools</a>
                         <a href="../tools/youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
@@ -27,11 +26,12 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="../extensions/extensions.html">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <a href="#" onclick="return false;">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
                     <div class="dropdown-content">
                         <a href="../extensions/extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
                         <a href="../extensions/citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
-                        <!-- Add more extension links here -->
+                        <a href="../extensions/grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a>
+                        <a href="../extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
                     </div>
                 </div>
                 <a href="about.html">About</a>
@@ -40,55 +40,70 @@
     </header>
 
     <main class="main-container">
-        <section>
-            <section class="privacy-section" style="padding-top: 120px;">
-                <div class="privacy-content" style="max-width: 800px; margin: 0 auto;">
-                    <h1 style="font-size: 3rem; margin-bottom: 2rem;">Privacy Policy</h1>
-                    
-                    <div class="privacy-text" style="color: var(--text-secondary); font-size: 1.1rem;">
-                        <p style="margin-bottom: 1.5rem;">
-                            Last updated: February 11, 2024
-                        </p>
+        <section class="privacy-section" style="padding-top: 120px;">
+            <div class="privacy-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3rem; margin-bottom: 2rem;">Privacy Policy</h1>
+                
+                <div class="privacy-text" style="color: var(--text-secondary); font-size: 1.1rem;">
+                    <p style="margin-bottom: 1.5rem;">
+                        Last updated: February 11, 2024
+                    </p>
 
-                        <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">1. Information We Collect</h2>
-                        <p style="margin-bottom: 1.5rem;">
-                            We collect minimal information necessary to provide our services. This may include:
-                            <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                                <li>Usage data for improving our tools</li>
-                                <li>Technical information about your browser and device</li>
-                                <li>Information you voluntarily provide through our contact forms</li>
-                            </ul>
-                        </p>
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">1. Information We Collect</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        We collect minimal information necessary to provide our services. This may include:
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Usage data for improving our tools</li>
+                            <li>Technical information about your browser and device</li>
+                            <li>Information you voluntarily provide through our contact forms</li>
+                        </ul>
+                    </p>
 
-                        <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">2. How We Use Your Information</h2>
-                        <p style="margin-bottom: 1.5rem;">
-                            We use the collected information to:
-                            <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                                <li>Provide and improve our services</li>
-                                <li>Respond to your inquiries</li>
-                                <li>Fix bugs and optimize our tools</li>
-                                <li>Ensure the security of our services</li>
-                            </ul>
-                        </p>
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">2. How We Use Your Information</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        We use the collected information to:
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Provide and improve our services</li>
+                            <li>Respond to your inquiries</li>
+                            <li>Fix bugs and optimize our tools</li>
+                            <li>Ensure the security of our services</li>
+                        </ul>
+                    </p>
 
-                        <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">3. Data Security</h2>
-                        <p style="margin-bottom: 1.5rem;">
-                            We implement appropriate security measures to protect your information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
-                        </p>
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">3. Data Security</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        We implement appropriate security measures to protect your information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+                    </p>
 
-                        <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">4. Chrome Extensions</h2>
-                        <p style="margin-bottom: 1.5rem;">
-                            Our Chrome extensions collect only the data necessary for their functionality. We do not track your browsing history or collect personal information unless explicitly required for the extension's core features.
-                        </p>
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">4. Data Retention</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        We retain your information only for as long as necessary to provide our services and fulfill the purposes outlined in this privacy policy. When we no longer need to use your information, we will securely delete or anonymize it.
+                    </p>
 
-                        <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">5. Contact Us</h2>
-                        <p style="margin-bottom: 1.5rem;">
-                            If you have any questions about this Privacy Policy, please contact us at:
-                            <a href="mailto:hello@pidfun.com" style="color: var(--primary); display: block; margin-top: 0.5rem;">hello@pidfun.com</a>
-                        </p>
-                    </div>
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">5. Your Rights</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        You have the right to:
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Access your personal information</li>
+                            <li>Request correction of your personal information</li>
+                            <li>Request deletion of your personal information</li>
+                            <li>Object to processing of your personal information</li>
+                            <li>Request restriction of processing your personal information</li>
+                        </ul>
+                    </p>
+
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">6. Chrome Extensions</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        Our Chrome extensions collect only the data necessary for their functionality. We do not track your browsing history or collect personal information unless explicitly required for the extension's core features.
+                    </p>
+
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">7. Contact Us</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        If you have any questions about this Privacy Policy, please contact us at:
+                        <a href="mailto:hello@pidfun.com" style="color: var(--primary); display: block; margin-top: 0.5rem;">hello@pidfun.com</a>
+                    </p>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
 

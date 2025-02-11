@@ -3,42 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readability Enhancer - PidFun</title>
-    <meta name="description" content="Enhance readability.">
+    <title>Readability Enhancer - PidFun AI Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
 </head>
 <body>
+    <!-- Include Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
                 <a href="../index.html">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(#logoGradient)">PidFun</text>
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:var(--gradient-start);stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:var(--gradient-mid2);stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="../assets/img/pidfun-text.svg" alt="PidFun Logo" height="40">
                 </a>
             </div>
             <div class="nav-links">
-                <a href="../index.html#tools">Tools</a>
-                <a href="../index.html#extensions">Extensions</a>
+                <div class="dropdown">
+                    <a href="#" onclick="return false;">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="../tools/tools.html"><i class="fas fa-tools"></i> All Tools</a>
+                        <a href="../tools/youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
+                        <a href="../tools/text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
+                        <a href="../tools/pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" onclick="return false;">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
+                        <a href="citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
+                        <a href="grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a>
+                        <a href="readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
+                    </div>
+                </div>
                 <a href="../pages/about.html">About</a>
             </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <section class = "section-bg-1">
-            <h2>Readability Enhancer</h2>
-            <p>Extension-specific content goes here...</p>
+        <section class="extension-section" style="padding-top: 120px;">
+            <div class="extension-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3rem; margin-bottom: 2rem;">Readability Enhancer</h1>
+                
+                <div class="extension-description" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                    <p>Make any web content more readable with our smart readability enhancement extension.</p>
+                </div>
+
+                <div class="extension-features">
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">Features</h2>
+                    <ul style="margin-left: 2rem;">
+                        <li>Custom font size and type adjustments</li>
+                        <li>Color contrast optimization</li>
+                        <li>Line spacing and width controls</li>
+                        <li>Reading mode with distractions removed</li>
+                        <li>Text-to-speech integration</li>
+                    </ul>
+                </div>
+
+                <div class="extension-usage">
+                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">How to Use</h2>
+                    <ol style="margin-left: 2rem;">
+                        <li>Install the Chrome extension</li>
+                        <li>Click the extension icon on any webpage</li>
+                        <li>Adjust readability settings to your preference</li>
+                        <li>Enjoy improved reading experience</li>
+                    </ol>
+                </div>
+
+                <div class="extension-cta" style="margin-top: 3rem;">
+                    <div class="cta-container" style="background: var(--background-secondary); padding: 2rem; border-radius: 8px; text-align: center;">
+                        <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button" style="display: inline-block; text-decoration: none;">
+                            <i class="fab fa-chrome"></i> Add to Chrome
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Include Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -59,6 +102,5 @@
             <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
 </body>
 </html> 
