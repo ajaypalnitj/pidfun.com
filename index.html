@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PidFun - Smart Tools & Extensions</title>
+    <meta name="description" content="Discover our collection of productivity tools and Chrome extensions. From YouTube transcript analysis to citation helpers, we make your digital life easier.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Modern CSS Reset -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Include Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(#logoGradient)">PidFun</text>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:var(--gradient-start);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--gradient-mid2);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="tools/tools.html">Tools <span class="arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="tools/tools.html"><i class="fas fa-tools"></i> All Tools</a>
+                        <a href="tools/youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
+                        <a href="tools/text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
+                        <a href="tools/pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="extensions/extensions.html">Extensions <span class="arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="extensions/extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
+                        <a href="extensions/citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
+                        <a href="extensions/grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a>
+                        <a href="extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
+                    </div>
+                </div>
+                <a href="pages/about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Smart Tools for Smart People</h1>
+                <p>Enhance your productivity with our carefully crafted tools and extensions</p>
+                <a href="tools/tools.html" class="cta-button">Explore Tools</a>
+            </div>
+        </section>
+
+        <section id="tools" class="tools-section">
+            <h2>Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <!-- SVG for YouTube Tool -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7.5V16.5C21 17.6268 20.5286 18.699 19.7029 19.4456C18.8772 20.1922 17.754 20.6 16.5 20.6H7.5C6.37316 20.6 5.24998 20.1922 4.42433 19.4456C3.59868 18.699 3.12731 17.6268 3.12731 16.5V7.5C3.12731 6.37316 3.59868 5.30097 4.42433 4.55441C5.24998 3.80785 6.37316 3.40001 7.5 3.40001H16.5C17.6268 3.40001 18.7501 3.80785 19.5757 4.55441C20.4013 5.30097 20.8727 6.37316 21 7.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.4955 8.67386C16.6588 9.34689 17.392 10.6087 17.392 12C17.392 13.3913 16.6588 14.6531 15.4955 15.3261" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.50452 15.3261C7.34123 14.6531 6.60803 13.3913 6.60803 12C6.60803 10.6087 7.34123 9.34689 8.50452 8.67386" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>YouTube Transcript Analyzer</h3>
+                    <p>Extract and analyze transcripts from YouTube videos.</p>
+                    <a href="tools/youtube-transcript.html" class="tool-link">Learn More →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <!-- SVG for Text Analysis -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.75 6.75C4.75 5.64543 5.64543 4.75 6.75 4.75H17.25C18.3546 4.75 19.25 5.64543 19.25 6.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V6.75Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8.75 9.75H15.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8.75 12.75H15.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8.75 15.75H12.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Text Analysis Tool</h3>
+                    <p>Analyze text for sentiment, readability, and key insights.</p>
+                    <a href="tools/text-analysis.html" class="tool-link">Learn More →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <!-- SVG for PDF Summarizer -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 6v5m0 0v5m0-5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>PDF Summarizer</h3>
+                    <p>Summarize PDF documents quickly and efficiently.</p>
+                    <a href="tools/pdf-summarizer.html" class="tool-link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="extensions" class="extensions-section">
+            <h2>Extensions</h2>
+            <div class="extensions-grid">
+                <div class="extension-card">
+                    <div class="extension-icon">
+                        <!-- Replace with appropriate SVG icon -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Citation Helper</h3>
+                    <p>Generate citations in various formats with ease.</p>
+                    <a href="extensions/citation-helper.html" class="extension-link">Learn More →</a>
+                </div>
+                <div class="extension-card">
+                    <div class="extension-icon">
+                        <!-- Replace with appropriate SVG icon -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Grammar Checker</h3>
+                    <p>Check and correct your grammar online.</p>
+                    <a href="extensions/grammar-checker.html" class="extension-link">Learn More →</a>
+                </div>
+                <div class="extension-card">
+                    <div class="extension-icon">
+                        <!-- Replace with appropriate SVG icon -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Readability Enhancer</h3>
+                    <p>Improve the readability of any text.</p>
+                    <a href="extensions/readability-enhancer.html" class="extension-link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="mailto:hello@pidfun.com">hello@pidfun.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="pages/privacy.html">Privacy Policy</a>
+                <a href="pages/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="pages/about.html">About Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PidFun. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

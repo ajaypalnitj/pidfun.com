@@ -1,0 +1,433 @@
+/* Master Stylesheet */
+
+/* Root Variables */
+:root {
+    --primary: #4F46E5;
+    --primary-dark: #4338CA;
+    --secondary: #EC4899;
+    --accent: #0EA5E9;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --background: #ffffff;
+    --background-alt: #f3f4f6;
+    --card-bg: #ffffff;
+    --gradient-start: #7C3AED;
+    --gradient-mid1: #6A3FB5;
+    --gradient-mid2: #00BFA6;
+    --gradient-end: #ffffff;
+    --gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid2));
+    --cta-bg: var(--primary);
+    --cta-text: #fff;
+}
+
+/* Global Styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    background:
+        radial-gradient(100% 100% at 0% 0%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+        radial-gradient(100% 100% at 100% 0%, rgba(0, 191, 166, 0.3) 0%, transparent 50%),
+        radial-gradient(100% 100% at 0% 100%, rgba(106, 63, 181, 0.3) 0%, transparent 50%),
+        radial-gradient(100% 100% at 100% 100%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+        linear-gradient(to bottom right, rgba(124, 58, 237, 0.2), rgba(0, 191, 166, 0.2)),
+        var(--background);
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    background-position: center;
+    padding-top: 56px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(0, 191, 166, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(106, 63, 181, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.2) 0%, transparent 50%);
+    animation: gradientMove 30s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(-25%, -25%); }
+    100% { transform: translate(0, 0); }
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Component Styles (Combined) --- */
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+}
+
+/* Footer Styles */
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 0.25rem;
+    color: var(--text);
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--background);
+    color: var(--text-light);
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+/* Hero Section Styles */
+.hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--primary-dark);
+}
+
+/* Cards Section Styles */
+.tools-section, .extensions-section {
+    padding: 4rem 1rem;
+}
+
+.tools-grid, .extensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.tool-card, .extension-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover, .extension-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon, .extension-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+.tool-card h3, .extension-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.tool-card p, .extension-card p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.tool-link, .extension-link {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.tool-link:hover, .extension-link:hover {
+    color: var(--primary-dark);
+}
+
+/* CTA Section Styles (If you have a separate CTA section) */
+/*
+.cta-section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: var(--background-alt);
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+*/
+
+/* General Section Styles */
+section {
+    padding: 1.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-grid, .extensions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card, .extension-card {
+        padding: 0.8rem;
+    }
+
+    .tool-card h3, .extension-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .tool-card p, .extension-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* View All Link */
+.view-all-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.view-all-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-link:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center; /* Vertically center the icon and text */
+}
+
+.dropdown a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px; /* Reduced padding for smaller text */
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255,255,255,0.1); /* Lighter on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+.dropdown-content i {
+    margin-right: 5px; /* Reduced spacing for smaller text */
+    width: 1em;
+    text-align: center;
+    display: inline-block; /* Ensure icons are inline with text */
+}
+
+/* Intro Section Styles */
+.intro-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--background-alt); /* A softer background */
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-section p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
