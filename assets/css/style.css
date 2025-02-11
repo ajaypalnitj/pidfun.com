@@ -92,6 +92,20 @@ body::before {
     font-size: 1.2rem;
     color: var(--text-light);
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo text {
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    fill: url(#logoGradient);
 }
 
 .nav-links {
@@ -221,6 +235,7 @@ body::before {
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 1.2rem;
 }
 
 .tool-card:hover, .extension-card:hover {
@@ -433,4 +448,15 @@ h2 {
 
 h1 {
     font-size: 2.5rem;
+}
+
+.nav-links .dropdown a .arrow {
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.nav-links .dropdown:hover .arrow {
+    transform: translateY(3px);
 }
