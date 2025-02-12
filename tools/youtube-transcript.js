@@ -20,21 +20,26 @@ async function extractTranscript() {
         button.textContent = 'Processing...';
         resultDiv.innerHTML = '<div class="loading">Analyzing video...<div class="loader"></div></div>';
         
-        console.log('Sending request:', {
+        // Log the full request details
+        const requestDetails = {
             url: `${API_URL}/process`,
-            videoUrl: videoUrl
-        });
-
-        const response = await fetch(`${API_URL}/process`, {
-            method: 'POST',
+            videoUrl: videoUrl,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Accept': 'application/json',
-                'Origin': 'https://pidfun.com'
-            },
-            body: `video_url=${encodeURIComponent(videoUrl)}`
+                'Origin': window.location.origin
+            }
+        };
+        console.log('Request details:', requestDetails);
+
+        const response = await fetch(`${API_URL}/process`, {
+            method: 'POST',
+            headers: requestDetails.headers,
+            body: `video_url=${encodeURIComponent(videoUrl)}`,
+            credentials: 'omit'
         });
         
+        // Log response details
         console.log('Response status:', response.status);
         console.log('Response headers:', Object.fromEntries(response.headers));
 
@@ -44,13 +49,16 @@ async function extractTranscript() {
         let data;
         try {
             data = JSON.parse(responseText);
+            console.log('Parsed response data:', data);
         } catch (e) {
             console.error('Failed to parse JSON:', e);
-            throw new Error('Invalid response format from server');
+            console.error('Raw response that failed to parse:', responseText);
+            throw new Error(`Failed to parse server response: ${responseText}`);
         }
 
         if (!response.ok) {
-            throw new Error(data.error || `Server error: ${response.status}`);
+            console.error('Server error details:', data);
+            throw new Error(data.error || `Server error: ${response.status}. ${responseText}`);
         }
         
         if (data.error) {
@@ -78,7 +86,11 @@ async function extractTranscript() {
         
         resultDiv.innerHTML = downloadHtml;
     } catch (error) {
-        console.error('Error details:', error);
+        console.error('Full error details:', {
+            message: error.message,
+            stack: error.stack,
+            error: error
+        });
         resultDiv.innerHTML = `<div class="error">
             ${error.message || 'An unexpected error occurred. Please try again.'}
         </div>`;
