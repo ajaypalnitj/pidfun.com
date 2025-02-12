@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Analysis Tool - Analyze and Understand Text Content | PidFun</title>
     <meta name="description" content="Analyze text content for sentiment, keywords, entities, and more with PidFun's AI-powered Text Analysis Tool. Gain valuable insights from your text data.">
-    <meta name="keywords" content="text analysis, text analyzer, sentiment analysis, keyword extraction, entity recognition, AI, PidFun, text insights, content analysis">
+    <meta name="keywords" content="text analysis, sentiment analysis, keyword extraction, entity recognition, natural language processing, NLP, AI, text mining, PidFun">
     <meta name="author" content="PidFun">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -22,10 +22,10 @@
                 <div class="dropdown">
                     <a href="#" onclick="return false;">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
                     <div class="dropdown-content">
-                        <a href="tools.html"><i class="fas fa-tools"></i> All Tools</a>
-                        <a href="youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
-                        <a href="text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
-                        <a href="pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
+                        <a href="../tools/tools.html"><i class="fas fa-tools"></i> All Tools</a>
+                        <a href="../tools/youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
+                        <a href="../tools/text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
+                        <a href="../tools/pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -43,40 +43,36 @@
     </header>
 
     <main class="main-container">
-        <section id="tool-intro" class="intro-section">
-            <h1>Text Analysis Tool</h1>
-            <p>
-                Unlock valuable insights from your text data with our powerful Text Analysis Tool. Analyze sentiment, extract keywords, identify entities, and more.
-            </p>
-        </section>
+        <section class="tool-section" style="padding-top: 120px;">
+            <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Text Analysis Tool</h1>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                    Analyze text content for sentiment, keywords, entities, and more.
+                </p>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); font-weight: bold;">Coming Soon!</p>
 
-        <section id="tool-features" class="features-section">
-            <h2>Features</h2>
-            <ul class="features-list">
-                <li>Sentiment analysis (positive, negative, neutral)</li>
-                <li>Keyword extraction</li>
-                <li>Entity recognition (people, organizations, locations, etc.)</li>
-                <li>Text summarization</li>
-                <li>Content classification</li>
-            </ul>
-        </section>
+                
 
-        <section id="tool-how-to" class="how-to-section">
-            < h2>How to Use</h2 >
-            <ol class="how-to-steps">
-                <li>Enter or paste your text into the input box.</li>
-                <li>Click the "Analyze Text" button.</li>
-                <li>View the analysis results.</li>
-            </ol>
-        </section>
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Key Features</h2>
+                <ul style="margin-bottom: 2rem; list-style: disc; padding-left: 20px; font-size: 1.1rem; color: var(--text-secondary);">
+                    <li>Sentiment analysis (positive, negative, neutral)</li>
+                    <li>Keyword extraction</li>
+                    <li>Entity recognition (people, places, organizations, etc.)</li>
+                    <li>Text summarization</li>
+                    <li>Language detection</li>
+                </ul>
 
-        <section id="tool-form" class="form-section">
-            < h2>Analyze Text</h2 >
-            <form id="text-analysis-form" action="#" method="post">
-                <label for="text-input">Enter Text:</label>
-                <textarea id="text-input" name="text-input" placeholder="Enter text to analyze" required></textarea>
-                <button type="submit" class="cta-button">Analyze Text</button>
-            </form>
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">How to Use (when available)</h2>
+                <ol style="margin-bottom: 2rem; padding-left: 20px; font-size: 1.1rem; color: var(--text-secondary);">
+                    <li>Enter or paste your text into the input box.</li>
+                    <li>Click the "Analyze" button.</li>
+                    <li>View the results, including sentiment, keywords, entities, and summary.</li>
+                </ol>
+
+                
+                <textarea id="textInput" placeholder="Enter text here..." rows="5" style="width: 100%; padding: 10px; margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: 4px;" disabled></textarea>
+                <button class="button primary-button" style="font-size: 1.2rem;" disabled>Analyze</button>
+            </div>
         </section>
     </main>
 
