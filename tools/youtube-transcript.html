@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Transcript Analyzer - PidFun AI Tools</title>
+    <title>YouTube Transcript Analyzer - Extract & Analyze Video Transcripts | PidFun</title>
+    <meta name="description" content="Extract, analyze, and summarize YouTube video transcripts with PidFun's AI-powered tool. Gain insights, find key moments, and improve comprehension.">
+    <meta name="keywords" content="YouTube transcript, transcript analyzer, video transcript, AI, PidFun, extract transcript, analyze transcript, summarize transcript, video analysis">
+    <meta name="author" content="PidFun">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -41,41 +44,40 @@
     </header>
 
     <main class="main-container">
-        <section class="tool-section" style="padding-top: 120px;">
-            <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
-                <h1 style="font-size: 3rem; margin-bottom: 2rem;">YouTube Transcript Analyzer</h1>
-                
-                <div class="tool-description" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
-                    <p>Extract and analyze transcripts from YouTube videos with our powerful tool. Get insights, summaries, and more.</p>
-                </div>
+        <section id="tool-intro" class="intro-section">
+            <h1>YouTube Transcript Analyzer</h1>
+            <p>
+                Extract and analyze the transcript of any YouTube video quickly and easily. Our AI-powered tool helps you understand the content, identify key topics, and find specific moments within the video.
+            </p>
+        </section>
 
-                <div class="tool-features">
-                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">Features</h2>
-                    <ul style="margin-left: 2rem;">
-                        <li>Extract transcripts from any YouTube video</li>
-                        <li>Generate summaries of video content</li>
-                        <li>Analyze key topics and themes</li>
-                        <li>Export transcripts in multiple formats</li>
-                    </ul>
-                </div>
+        <section id="tool-features" class="features-section">
+            <h2>Features</h2>
+            <ul class="features-list">
+                <li>Extract transcripts from YouTube videos</li>
+                <li>Analyze transcript content with AI</li>
+                <li>Identify key topics and themes</li>
+                <li>Find specific moments within the video</li>
+                <li>Summarize the transcript content</li>
+            </ul>
+        </section>
 
-                <div class="tool-usage">
-                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">How to Use</h2>
-                    <ol style="margin-left: 2rem;">
-                        <li>Paste your YouTube video URL</li>
-                        <li>Select your preferred analysis options</li>
-                        <li>Click "Analyze" to get results</li>
-                        <li>Download or share your analysis</li>
-                    </ol>
-                </div>
+        <section id="tool-how-to" class="how-to-section">
+            <h2>How to Use</h2>
+            <ol class="how-to-steps">
+                <li>Enter the YouTube video URL.</li>
+                <li>Click the "Extract Transcript" button.</li>
+                <li>View and analyze the extracted transcript.</li>
+            </ol>
+        </section>
 
-                <div class="tool-demo" style="margin-top: 3rem;">
-                    <div class="demo-container" style="background: var(--background-secondary); padding: 2rem; border-radius: 8px;">
-                        <input type="text" placeholder="Paste YouTube URL here..." style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; border: 1px solid var(--border);">
-                        <button class="cta-button" style="width: 100%;">Analyze Video</button>
-                    </div>
-                </div>
-            </div>
+        <section id="tool-form" class="form-section">
+            <h2>Analyze Transcript</h2>
+            <form id="transcript-form" action="#" method="post">
+                <label for="youtube-url">YouTube Video URL:</label>
+                <input type="url" id="youtube-url" name="youtube-url" placeholder="Enter YouTube URL" required>
+                <button type="submit" class="cta-button">Extract Transcript</button>
+            </form>
         </section>
     </main>
 
@@ -95,10 +97,19 @@
                 <h4>Company</h4>
                 <a href="../pages/about.html">About Us</a>
             </div>
+            <!-- Add Social Media Links -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://x.com/pidfun" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> X (Twitter)
+                </a>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html> 

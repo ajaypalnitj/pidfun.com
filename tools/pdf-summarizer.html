@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Summarizer - PidFun AI Tools</title>
+    <title>PDF Summarizer - Generate Concise Summaries of PDF Documents | PidFun</title>
+    <meta name="description" content="Quickly summarize PDF documents with PidFun's AI-powered PDF Summarizer. Extract key information and save time.">
+    <meta name="keywords" content="PDF summarizer, summarize PDF, PDF summary, AI, PidFun, document summarization, extract information, key points, summary generator">
+    <meta name="author" content="PidFun">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <!-- Include Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -41,49 +43,43 @@
     </header>
 
     <main class="main-container">
-        <section class="tool-section" style="padding-top: 120px;">
-            <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
-                <h1 style="font-size: 3rem; margin-bottom: 2rem;">PDF Summarizer</h1>
-                
-                <div class="tool-description" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
-                    <p>Quickly summarize PDF documents and extract key information with our intelligent PDF summarization tool.</p>
-                </div>
+        <section id="tool-intro" class="intro-section">
+            <h1>PDF Summarizer</h1>
+            <p>
+                Generate concise summaries of your PDF documents quickly and accurately. Our AI-powered tool extracts the key information, saving you time and effort.
+            </p>
+        </section>
 
-                <div class="tool-features">
-                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">Features</h2>
-                    <ul style="margin-left: 2rem;">
-                        <li>Automatic text extraction from PDFs</li>
-                        <li>Smart summarization algorithms</li>
-                        <li>Key points identification</li>
-                        <li>Multiple summary lengths</li>
-                        <li>Export summaries in various formats</li>
-                    </ul>
-                </div>
+        <section id="tool-features" class="features-section">
+            <h2>Features</h2>
+            <ul class="features-list">
+                <li>Summarize PDF documents of any length</li>
+                <li>Extract key points and main ideas</li>
+                <li>Adjust summary length to your preference</li>
+                <li>Fast and accurate summarization</li>
+                <li>Easy-to-use interface</li>
+            </ul>
+        </section>
 
-                <div class="tool-usage">
-                    <h2 style="color: var(--text); font-size: 1.5rem; margin: 2rem 0 1rem;">How to Use</h2>
-                    <ol style="margin-left: 2rem;">
-                        <li>Upload your PDF document</li>
-                        <li>Choose summary length and style</li>
-                        <li>Click "Summarize" to process</li>
-                        <li>View and download your summary</li>
-                    </ol>
-                </div>
+        <section id="tool-how-to" class="how-to-section">
+            < h2>How to Use</h2 >
+            <ol class="how-to-steps">
+                <li>Upload your PDF document.</li>
+                <li>Click the "Summarize PDF" button.</li>
+                <li>View and download the generated summary.</li>
+            </ol>
+        </section>
 
-                <div class="tool-demo" style="margin-top: 3rem;">
-                    <div class="demo-container" style="background: var(--background-secondary); padding: 2rem; border-radius: 8px;">
-                        <div class="file-upload" style="border: 2px dashed var(--border); padding: 2rem; text-align: center; margin-bottom: 1rem; border-radius: 4px;">
-                            <i class="fas fa-cloud-upload-alt fa-3x" style="margin-bottom: 1rem;"></i>
-                            <p>Drag and drop your PDF here or click to browse</p>
-                        </div>
-                        <button class="cta-button" style="width: 100%;">Summarize PDF</button>
-                    </div>
-                </div>
-            </div>
+        <section id="tool-form" class="form-section">
+            < h2>Summarize PDF</h2 >
+            <form id="pdf-summarizer-form" action="#" method="post" enctype="multipart/form-data">
+                <label for="pdf-file">Upload PDF:</label>
+                <input type="file" id="pdf-file" name="pdf-file" accept=".pdf" required>
+                <button type="submit" class="cta-button">Summarize PDF</button>
+            </form>
         </section>
     </main>
 
-    <!-- Include Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -99,10 +95,19 @@
                 <h4>Company</h4>
                 <a href="../pages/about.html">About Us</a>
             </div>
+            <!-- Add Social Media Links -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://x.com/pidfun" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> X (Twitter)
+                </a>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html> 

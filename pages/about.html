@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PidFun AI Tools</title>
+    <title>About Us - PidFun: Our Mission and AI Tools</title>
+    <meta name="description" content="Learn about PidFun's mission to empower users with innovative AI tools. Discover our YouTube Transcript Analyzer, Text Analysis Tool, PDF Summarizer, and more.">
+    <meta name="keywords" content="About PidFun, mission, AI tools, YouTube Transcript Analyzer, text analysis, PDF summarizer, company, team, values">
+    <meta name="author" content="PidFun">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -27,7 +30,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="../extensions/extensions.html">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <a href="#" onclick="return false;">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
                     <div class="dropdown-content">
                         <a href="../extensions/extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
                         <a href="../extensions/citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
@@ -35,19 +38,23 @@
                         <a href="../extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
                     </div>
                 </div>
-                <a href="./about.html">About</a>
+                <a href="../pages/about.html">About</a>
             </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <section id="about-us">
-            <h2>About PidFun AI Tools <i class="fas fa-info-circle"></i></h2>
+        <section id="about-us" class="about-section">
+            <h1>About PidFun</h1>
             <p>
-                PidFun is your go-to platform for smart tools and extensions designed to enhance productivity and simplify your digital life. We offer a curated collection of tools, from YouTube transcript analysis to PDF summarization, and extensions like citation helpers and grammar checkers.
+                PidFun is dedicated to creating innovative AI-powered tools and extensions that simplify your digital life and boost your productivity. We believe in empowering users with smart solutions that make complex tasks easier and more efficient.
             </p>
+        </section>
+
+        <section id="our-mission" class="mission-section">
+            <h2>Our Mission</h2>
             <p>
-                Our mission is to empower users with accessible and efficient AI-driven solutions. Whether you're a student, researcher, or professional, PidFun provides the resources you need to streamline your workflow and achieve your goals.
+                Our mission is to develop cutting-edge AI tools that are accessible, user-friendly, and impactful. We strive to provide solutions that help you analyze information, understand content, and work smarter, not harder.
             </p>
         </section>
 
@@ -70,13 +77,6 @@
                 <li><a href="../extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>: Improve the readability of any text.</li>
             </ul>
         </section>
-
-        <section id="contact-us">
-            <h2>Contact Us <i class="fas fa-envelope"></i></h2>
-            <p>
-                Have questions or suggestions? We'd love to hear from you! Contact us at: <a href="mailto:hello@pidfun.com">hello@pidfun.com</a>
-            </p>
-        </section>
     </main>
 
     <!-- Include Footer -->
@@ -88,17 +88,25 @@
             </div>
             <div class="footer-section">
                 <h4>Legal</h4>
-                <a href="terms.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+                <a href="../pages/privacy.html">Privacy Policy</a>
+                <a href="../pages/terms.html">Terms of Service</a>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
-                <a href="about.html">About Us</a>
+                <a href="../pages/about.html">About Us</a>
+            </div>
+            <!-- Add Social Media Links -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://x.com/pidfun" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> X (Twitter)
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
