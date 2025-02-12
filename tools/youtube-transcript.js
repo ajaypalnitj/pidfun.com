@@ -20,25 +20,38 @@ async function extractTranscript() {
         button.textContent = 'Processing...';
         resultDiv.innerHTML = '<div class="loading">Analyzing video...<div class="loader"></div></div>';
         
+        console.log('Sending request:', {
+            url: `${API_URL}/process`,
+            videoUrl: videoUrl
+        });
+
         const response = await fetch(`${API_URL}/process`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'Origin': 'https://pidfun.com'
             },
             body: `video_url=${encodeURIComponent(videoUrl)}`
         });
         
-        if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
+        console.log('Response status:', response.status);
+        console.log('Response headers:', Object.fromEntries(response.headers));
+
+        const responseText = await response.text();
+        console.log('Raw response:', responseText);
+
+        let data;
+        try {
+            data = JSON.parse(responseText);
+        } catch (e) {
+            console.error('Failed to parse JSON:', e);
+            throw new Error('Invalid response format from server');
         }
 
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-            throw new Error('Received invalid response from server');
+        if (!response.ok) {
+            throw new Error(data.error || `Server error: ${response.status}`);
         }
-        
-        const data = await response.json();
         
         if (data.error) {
             throw new Error(data.error);
@@ -48,7 +61,7 @@ async function extractTranscript() {
         if (data.transcript_file) {
             downloadHtml += `
                 <a href="${API_URL}/download/${data.session_id}/transcript.txt" 
-                   class="download-button">
+                   class="download-button" target="_blank">
                    <span class="icon">📄</span>
                    Download Transcript
                 </a>`;
@@ -56,7 +69,7 @@ async function extractTranscript() {
         if (data.analysis_file) {
             downloadHtml += `
                 <a href="${API_URL}/download/${data.session_id}/analysis.txt" 
-                   class="download-button">
+                   class="download-button" target="_blank">
                    <span class="icon">📊</span>
                    Download Analysis
                 </a>`;
@@ -65,7 +78,7 @@ async function extractTranscript() {
         
         resultDiv.innerHTML = downloadHtml;
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error details:', error);
         resultDiv.innerHTML = `<div class="error">
             ${error.message || 'An unexpected error occurred. Please try again.'}
         </div>`;
