@@ -3,65 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Transcript Analyzer - PidFun Tools</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <title>YouTube Transcript Analyzer - Extract and Analyze Video Content | PidFun</title>
+    <meta name="description" content="Extract and analyze YouTube video transcripts with PidFun's AI-powered YouTube Transcript Analyzer. Get insights from video content quickly and easily.">
+    <meta name="keywords" content="YouTube transcript, video analysis, content extraction, video transcription, AI analysis, PidFun, video content">
+    <meta name="author" content="PidFun">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="youtube-transcript.css">
 </head>
 <body>
-    <header>
-        <a href="/" class="logo">PidFun Logo</a>
-        <nav>
-            <div class="nav-section">
-                <h3>Tools</h3>
-                <a href="/tools">All Tools</a>
-                <a href="/tools/youtube-transcript.html">YouTube Transcript</a>
-                <a href="/tools/text-analysis">Text Analysis</a>
-                <a href="/tools/pdf-summarizer">PDF Summarizer</a>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/img/pidfun-text.svg" alt="PidFun Logo" height="40">
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#" onclick="return false;">Tools <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="../tools/tools.html"><i class="fas fa-tools"></i> All Tools</a>
+                        <a href="../tools/youtube-transcript.html"><i class="fab fa-youtube"></i> YouTube Transcript</a>
+                        <a href="../tools/text-analysis.html"><i class="fas fa-file-alt"></i> Text Analysis</a>
+                        <a href="../tools/pdf-summarizer.html"><i class="fas fa-file-pdf"></i> PDF Summarizer</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" onclick="return false;">Extensions <span class="arrow"><i class="fas fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="../extensions/extensions.html"><i class="fas fa-puzzle-piece"></i> All Extensions</a>
+                        <a href="../extensions/citation-helper.html"><i class="fas fa-quote-left"></i> Citation Helper</a>
+                        <a href="../extensions/grammar-checker.html"><i class="fas fa-check-double"></i> Grammar Checker</a>
+                        <a href="../extensions/readability-enhancer.html"><i class="fas fa-book-open"></i> Readability Enhancer</a>
+                    </div>
+                </div>
+                <a href="../pages/about.html">About</a>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <h1>YouTube Transcript Analyzer</h1>
-        <p class="description">Extract and analyze transcripts from YouTube videos instantly.</p>
+    <main class="main-container">
+        <section class="tool-section" style="padding-top: 120px;">
+            <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">YouTube Transcript Analyzer</h1>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                    Extract and analyze transcripts from YouTube videos instantly.
+                </p>
 
-        <div class="tool-container">
-            <div class="input-section">
-                <input type="text" id="video-url" placeholder="Enter YouTube video URL" class="url-input">
-                <button id="extract-button" onclick="extractTranscript()" class="primary-button">Extract Transcript</button>
+                <div class="tool-container">
+                    <div class="input-section">
+                        <input type="text" id="video-url" placeholder="Enter YouTube video URL" class="url-input">
+                        <button id="extract-button" onclick="extractTranscript()" class="primary-button">Extract Transcript</button>
+                    </div>
+                    <div id="result"></div>
+                </div>
+
+                <section class="features" style="margin-top: 3rem;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Key Features</h2>
+                    <ul style="list-style: disc; padding-left: 20px; font-size: 1.1rem; color: var(--text-secondary);">
+                        <li>Extract transcripts from YouTube videos</li>
+                        <li>Summarize video content</li>
+                        <li>Identify key topics and keywords</li>
+                        <li>Analyze sentiment throughout the video</li>
+                        <li>Search for specific phrases within the transcript</li>
+                    </ul>
+                </section>
             </div>
-            <div id="result"></div>
-        </div>
-
-        <section class="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Extract transcripts from YouTube videos</li>
-                <li>Summarize video content</li>
-                <li>Identify key topics and keywords</li>
-                <li>Analyze sentiment throughout the video</li>
-                <li>Search for specific phrases within the transcript</li>
-            </ul>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <a href="mailto:contact@pidfun.com">contact@pidfun.com</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="mailto:hello@pidfun.com">hello@pidfun.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="../pages/privacy.html">Privacy Policy</a>
+                <a href="../pages/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="../pages/about.html">About Us</a>
+            </div>
+            <!-- Add Social Media Links -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://x.com/pidfun" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> X (Twitter)
+                </a>
+            </div>
         </div>
-        <div class="footer-section">
-            <h4>Legal</h4>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PidFun. All rights reserved.</p>
         </div>
-        <div class="footer-section">
-            <h4>Company</h4>
-            <a href="/about">About Us</a>
-        </div>
-        <p class="copyright">© 2025 PidFun. All rights reserved.</p>
     </footer>
 
     <script src="youtube-transcript.js"></script>
 </body>
-</html> 
+</html>
