@@ -1,7 +1,7 @@
 .tool-container {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -10,15 +10,15 @@
 .input-section {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .url-input {
     flex: 1;
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #e0e0e0;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .url-input:focus {
@@ -27,13 +27,13 @@
 }
 
 .primary-button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s;
 }
 
@@ -51,19 +51,20 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .download-button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     background-color: #2196F3;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     transition: background-color 0.3s;
+    font-size: 14px;
 }
 
 .download-button:hover {
@@ -71,27 +72,29 @@
 }
 
 .error {
-    padding: 1rem;
+    padding: 0.75rem;
     background-color: #ffebee;
     color: #c62828;
     border-radius: 6px;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
+    font-size: 14px;
 }
 
 .loading {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     color: #666;
+    font-size: 14px;
 }
 
 .loader {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    border: 3px solid #f3f3f3;
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    border: 2px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 3px solid #4CAF50;
+    border-top: 2px solid #4CAF50;
     animation: spin 1s linear infinite;
 }
 
@@ -100,72 +103,146 @@
     100% { transform: rotate(360deg); }
 }
 
-/* New styles for How It Works section */
+/* Compact How It Works section */
 .how-it-works {
-    margin: 4rem 0;
-    text-align: center;
+    margin: 2rem 0;
 }
 
 .steps-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
 }
 
 .step-card {
-    padding: 2rem;
     background: #f8f9fa;
     border-radius: 8px;
+    padding: 1rem;
     text-align: center;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #4CAF50;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .step-card h3 {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     color: #333;
+    font-size: 16px;
 }
 
-/* Features section styling */
+.step-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Compact Features section */
 .features {
-    margin: 4rem 0;
-    text-align: center;
+    margin: 2rem 0;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
 }
 
 .feature-card {
-    padding: 2rem;
     background: #f8f9fa;
     border-radius: 8px;
+    padding: 1rem;
     text-align: center;
 }
 
-/* FAQ section styling */
+.feature-card h3 {
+    margin: 0.5rem 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* FAQ Accordion */
 .faq-section {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 .faq-item {
-    margin-bottom: 2rem;
-}
-
-.faq-item h3 {
-    color: #333;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
     margin-bottom: 0.5rem;
+    overflow: hidden;
 }
 
-.faq-item p {
+.faq-question {
+    padding: 1rem;
+    background: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    background: white;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 14px;
     color: #666;
-    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 1rem;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 20px;
+    color: #666;
+}
+
+.faq-item.active .faq-question::after {
+    content: '−';
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #333;
+    font-size: 1.5rem;
 }

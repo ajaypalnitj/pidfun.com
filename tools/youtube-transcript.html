@@ -44,10 +44,10 @@
     </header>
 
     <main class="main-container">
-        <section class="tool-section" style="padding-top: 120px;">
+        <section class="tool-section" style="padding-top: 100px;">
             <div class="tool-content" style="max-width: 800px; margin: 0 auto;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;">YouTube Transcript & Analysis Tool</h1>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary); text-align: center;">
+                <h1 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">YouTube Transcript & Analysis Tool</h1>
+                <p style="font-size: 1rem; margin-bottom: 1.5rem; color: var(--text-secondary); text-align: center;">
                     Get transcripts and AI-powered summaries of YouTube videos instantly
                 </p>
 
@@ -63,19 +63,22 @@
                     <h2 class="section-title">How It Works</h2>
                     <div class="steps-container">
                         <div class="step-card">
-                            <i class="fas fa-copy fa-2x" style="color: #4CAF50;"></i>
+                            <div class="step-number">1</div>
+                            <i class="fas fa-copy" style="color: #4CAF50;"></i>
                             <h3>Copy YouTube URL</h3>
-                            <p>Copy the video URL from your browser's address bar or the share button below the video</p>
+                            <p>Copy the video URL from your browser's address bar</p>
                         </div>
                         <div class="step-card">
-                            <i class="fas fa-paste fa-2x" style="color: #2196F3;"></i>
+                            <div class="step-number">2</div>
+                            <i class="fas fa-paste" style="color: #2196F3;"></i>
                             <h3>Paste & Process</h3>
-                            <p>Paste the URL in the input field above and click the button to start processing</p>
+                            <p>Paste the URL and click to process</p>
                         </div>
                         <div class="step-card">
-                            <i class="fas fa-download fa-2x" style="color: #FF9800;"></i>
+                            <div class="step-number">3</div>
+                            <i class="fas fa-download" style="color: #FF9800;"></i>
                             <h3>Get Results</h3>
-                            <p>Download your transcript and AI-generated insights instantly</p>
+                            <p>Download transcript and insights instantly</p>
                         </div>
                     </div>
                 </section>
@@ -84,40 +87,58 @@
                     <h2 class="section-title">Features</h2>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <i class="fas fa-file-alt fa-2x" style="color: #4CAF50;"></i>
+                            <i class="fas fa-file-alt" style="color: #4CAF50;"></i>
                             <h3>Instant Transcripts</h3>
-                            <p>Get accurate transcripts from any YouTube video in seconds</p>
+                            <p>Get accurate transcripts in seconds</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-brain fa-2x" style="color: #2196F3;"></i>
+                            <i class="fas fa-brain" style="color: #2196F3;"></i>
                             <h3>AI Analysis</h3>
-                            <p>Receive AI-powered summaries and key insights</p>
+                            <p>AI-powered summaries and insights</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-bolt fa-2x" style="color: #FF9800;"></i>
+                            <i class="fas fa-bolt" style="color: #FF9800;"></i>
                             <h3>Fast & Free</h3>
-                            <p>No registration required, instant results</p>
+                            <p>No registration required</p>
                         </div>
                     </div>
                 </section>
 
                 <section class="faq-section">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <div class="faq-item">
-                        <h3>What types of videos can I transcribe?</h3>
-                        <p>You can transcribe any YouTube video that has closed captions or subtitles enabled. This includes most professionally produced content and videos with auto-generated captions.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>How accurate are the transcripts?</h3>
-                        <p>The accuracy depends on the video's audio quality and the availability of manual captions. For videos with clear audio and manual captions, accuracy is typically above 95%.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Is there a limit to video length?</h3>
-                        <p>Yes, we currently support videos up to 1 hour in length. For longer videos, you may need to process them in segments.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>How long are results stored?</h3>
-                        <p>Results are temporarily stored and automatically deleted after download or after 1 hour. We recommend downloading your results immediately.</p>
+                    <h2 class="section-title">FAQ</h2>
+                    <div id="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What types of videos can I transcribe?</h3>
+                            </div>
+                            <div class="faq-answer">
+                                <p>You can transcribe any YouTube video that has closed captions or subtitles enabled. This includes most professionally produced content and videos with auto-generated captions.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How accurate are the transcripts?</h3>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The accuracy depends on the video's audio quality and the availability of manual captions. For videos with clear audio and manual captions, accuracy is typically above 95%.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Is there a limit to video length?</h3>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we currently support videos up to 1 hour in length. For longer videos, you may need to process them in segments.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How long are results stored?</h3>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Results are temporarily stored and automatically deleted after download or after 1 hour. We recommend downloading your results immediately.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -152,5 +173,19 @@
     </footer>
 
     <script src="youtube-transcript.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
