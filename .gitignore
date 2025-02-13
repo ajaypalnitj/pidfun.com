@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.pyc
+__pycache__/
+!**/__init__.py
+!**/templates
+!**/static
+*.sqlite3
+local_settings.py 
